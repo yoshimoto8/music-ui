@@ -3,18 +3,44 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build": "babel src/ -d lib/",
+    "prepublish": "yarn run build",
+    "flow": "yarn run flow",
+    "precommit": "lint-staged",
+    "test": "jest --watch"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "dependencies": {
+    "@storybook/react": "^3.4.11",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.0.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.0",
+    "eslint": "^5.6.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "prettier": "^1.14.3",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "style-loader": "^0.23.0",
     "webpack": "^4.19.0",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8"
+  },
+  "devDependencies": {
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.81.0",
+    "husky": "^1.0.0-rc.15",
+    "jest": "^23.6.0",
+    "lint-staged": "^7.3.0"
   }
 }
