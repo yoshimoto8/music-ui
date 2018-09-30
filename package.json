@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "web": "node_modules/.bin/webpack-dev-server",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build": "babel src/ -d lib/",
     "prepublish": "yarn run build",
@@ -11,12 +12,12 @@
     "precommit": "lint-staged",
     "test": "jest --watch"
   },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
+  // "lint-staged": {
+  //   "*.js": [
+  //     "eslint --fix",
+  //     "git add"
+  //   ]
+  // },
   "dependencies": {
     "@storybook/react": "^3.4.11",
     "babel-cli": "^6.26.0",
