@@ -2,8 +2,12 @@
   "env": {
     "es6": true
   },
+  "parser": "babel-eslint",
   "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "plugins": ["flowtype"],
   "rules": {
+    "flowtype/define-flow-type": 1,
+    "flowtype/use-flow-type": 1,
     "prettier/prettier": [
       "error",
       {
