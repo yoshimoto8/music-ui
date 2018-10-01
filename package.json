@@ -1,8 +1,24 @@
 {
   "name": "music-ui",
   "version": "1.0.0",
-  "main": "index.js",
+  "author": "koki yoshimoto",
+  "main": "src/index.js",
   "license": "MIT",
+  "description": "React UI music components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoshimoto8/music-ui"
+  },
+  "keywords": [
+    "components",
+    "react",
+    "react-component",
+    "ui",
+    "styled-components",
+    "stateless",
+    "functional",
+    "music"
+  ],
   "scripts": {
     "web": "node_modules/.bin/webpack-dev-server",
     "storybook": "start-storybook -p 9001 -c .storybook",
